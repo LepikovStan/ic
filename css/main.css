@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline:none;
+}
+html {
+    height: 100%;
+    font-size: 100.1%;
+}
+body {
+    font: 12px/1.333 arial;
+    height: 100%;
+}
+a img, fieldset {
+    border: 0;
+}
+a {
+    outline: none;
+    color: #a70328;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+/*a:hover{
+	color:#3fa9f5;
+}*/
+li {
+    list-style: none;
+}
+table {
+	border-collapse: collapse;
+}
+/* html (begin) */
+article,aside,canvas,details,embed,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display: block;}
+command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr {display: inline;}
+/* html (end) */
+
+/* wrapper (begin) */
+.wrapper {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+/* wrapper (end) */
+
+/* cols (begin) */
+.cols {}
+.cols:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.cols .l-col {
+	float: left;
+}
+.cols .r-col {
+	float: right;
+}
+/* cols (end) */
+
+/* logo (begin) */
+.logo {}
+.logo img {
+	display: block;
+}
+/* logo (end) */
+
+/* phones (begin) */
+.phones {}
+.phones .phone {
+	font: bold 21px arial;
+}
+.phones .phone .prefix {
+	color: #a3a3a3;
+	margin: 0 5px 0 0;
+}
+.phones .worktime {
+	color: #8e8e8e;
+	font: 13px arial;
+	margin: 5px 0 0;
+}
+/* phones (end) */
+
+/* sendRequest (begin) */
+.sendRequest {
+	font: 13px arial;
+}
+.sendRequest .city {
+	font-weight: bold;
+}
+.sendRequest .address {
+	color: #8e8e8e;
+	margin: 0 0 5px;
+}
+/* sendRequest (end) */
+
+/* callback (begin) */
+.callback {
+	text-align: center;
+	color: #000;
+	font: bold 13px arial;
+	background: url(../i/phone-inround.png) no-repeat center 0;
+	padding: 40px 0 0;
+}
+.callback:hover {
+	color: #bf1e2e;
+}
+/* callback (end) */
+
+/* header (begin) */
+header {
+	padding: 23px 0;
+	position: relative;
+}
+header .phones {
+	position: absolute;
+	left: 335px;
+	bottom: 40px;
+}
+header .sendRequest {
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+	width: 180px;
+}
+header .callback {
+	position: absolute;
+	bottom: 40px;
+	left: 590px;
+}
+/* header (end) */
+
+/* button (begin) */
+.button {
+	font: bold 12px arial;
+	background: linear-gradient(top,  #fff,  #ececec);
+	background: -webkit-linear-gradient(left top, left bottom, #fff, #ececec);
+	background: -moz-linear-gradient(top,  #fff,  #ececec);
+	background: -o-linear-gradient(top,  #fff,  #ececec);
+	background: -ms-linear-gradient(top,  #fff,  #ececec);
+	border: 1px solid #d7d7d7;
+	text-decoration: none;
+	color: #000;
+	padding: 0 12px;
+	line-height: 24px;
+	display: inline-block;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.button:hover {
+	background: linear-gradient(top,  #f9f7f7,  #d5d5d5);
+	background: -webkit-linear-gradient(left top, left bottom, #f9f7f7, #d5d5d5);
+	background: -moz-linear-gradient(top,  #f9f7f7,  #d5d5d5);
+	background: -o-linear-gradient(top,  #f9f7f7,  #d5d5d5);
+	background: -ms-linear-gradient(top,  #f9f7f7,  #d5d5d5);
+}
+/* button (end) */
