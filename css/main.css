@@ -37,7 +37,7 @@ command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr {display: inline
 
 /* wrapper (begin) */
 .wrapper {
-	width: 980px;
+	width: 977px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -133,6 +133,7 @@ header .callback {
 /* button (begin) */
 .button {
 	font: bold 12px arial;
+    background: #fff;
 	background: linear-gradient(top,  #fff,  #ececec);
 	background: -webkit-linear-gradient(left top, left bottom, #fff, #ececec);
 	background: -moz-linear-gradient(top,  #fff,  #ececec);
@@ -149,6 +150,7 @@ header .callback {
 	border-radius: 5px;
 }
 .button:hover {
+    background: #f9f7f7;
 	background: linear-gradient(top,  #f9f7f7,  #d5d5d5);
 	background: -webkit-linear-gradient(left top, left bottom, #f9f7f7, #d5d5d5);
 	background: -moz-linear-gradient(top,  #f9f7f7,  #d5d5d5);
@@ -156,3 +158,133 @@ header .callback {
 	background: -ms-linear-gradient(top,  #f9f7f7,  #d5d5d5);
 }
 /* button (end) */
+
+/* menu (begin) */
+.menu {
+    overflow: hidden;
+    background: #f7941e;
+    background: linear-gradient(top,  #f7941e,  #f1592a);
+    background: -webkit-linear-gradient(left top, left bottom, #f7941e, #f1592a);
+    background: -moz-linear-gradient(top,  #f7941e,  #f1592a);
+    background: -o-linear-gradient(top,  #f7941e,  #f1592a);
+    background: -ms-linear-gradient(top,  #f7941e,  #f1592a);
+}
+.menu ul {
+    width: 1200px;
+}
+.menu li {
+    float: left;
+    font: bold 17px arial;
+    position: relative;
+}
+.menu li:before {
+    content: '';
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background: #f47924;
+    background: linear-gradient(top,  #f47924,  #f26029);
+    background: -webkit-linear-gradient(left top, left bottom, #f47924, #f26029);
+    background: -moz-linear-gradient(top,  #f47924,  #f26029);
+    background: -o-linear-gradient(top,  #f47924,  #f26029);
+    background: -ms-linear-gradient(top,  #f47924,  #f26029);
+}
+.menu li:after {
+    content: '';
+    height: 100%;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 1px;
+
+    background: #f7941e;
+    background: linear-gradient(top,  #f7941e,  #f47b23);
+    background: -webkit-linear-gradient(left top, left bottom, #f7941e, #f47b23);
+    background: -moz-linear-gradient(top,  #f7941e,  #f47b23);
+    background: -o-linear-gradient(top,  #f7941e,  #f47b23);
+    background: -ms-linear-gradient(top,  #f7941e,  #f47b23);
+}
+.menu li a {
+    display: inline-block;
+    line-height: 44px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 27px;
+}
+.menu li a img {
+    vertical-align: middle;
+    position: relative;
+    left: -3px;
+}
+/* menu (end) */
+
+/* banner (begin) */
+.banner {
+    overflow: hidden;
+}
+.banner ul {
+    width: 10000px;
+}
+.banner .banner-item {
+    float: left;
+}
+.banner .banner-item img {
+    display: block;
+}
+/* banner (end) */
+
+/* bannerLine (begin) */
+.bannerLine {}
+.bannerLine ul {
+    overflow: hidden;
+}
+.bannerLine ul li {
+    width: 25%;
+    height: 8px;
+    float: left;
+}
+.bannerLine ul li {
+    background: #f7941e;
+}
+.bannerLine ul li + li {
+    background: #f1592a;
+}
+.bannerLine ul li + li + li {
+    background: #ef4036;
+}
+.bannerLine ul li + li + li + li {
+    background: #bf1e2e;
+}
+/* bannerLine (end) */
+
+/* footer (begin) */
+footer {
+    padding: 15px 0;
+    background: #f7941e;
+    background: linear-gradient(top,  #f7941e,  #f1592a);
+    background: -webkit-linear-gradient(left top, left bottom, #f7941e, #f1592a);
+    background: -moz-linear-gradient(top,  #f7941e,  #f1592a);
+    background: -o-linear-gradient(top,  #f7941e,  #f1592a);
+    background: -ms-linear-gradient(top,  #f7941e,  #f1592a);
+}
+footer .wrapper {
+}
+/* footer (end) */
+
+/* fMenu (begin) */
+.fMenu {
+    overflow: hidden;
+}
+.fMenu li {
+    float: left;
+    margin-right: 15px;
+}
+.fMenu li a {
+    color: #fff;
+}
+/* fMenu (end) */
