@@ -161,7 +161,6 @@ header .callback {
 
 /* menu (begin) */
 .menu {
-    overflow: hidden;
     background: #f7941e;
     background: linear-gradient(top,  #f7941e,  #f1592a);
     background: -webkit-linear-gradient(left top, left bottom, #f7941e, #f1592a);
@@ -169,15 +168,21 @@ header .callback {
     background: -o-linear-gradient(top,  #f7941e,  #f1592a);
     background: -ms-linear-gradient(top,  #f7941e,  #f1592a);
 }
-.menu ul {
+.menu > ul {
     width: 1200px;
+    height: 44px;
 }
-.menu li {
+.menu > ul:after {
+    content: '';
+    clear: both;
+    width: 100%;
+}
+.menu > ul > li {
     float: left;
     font: bold 17px arial;
     position: relative;
 }
-.menu li:before {
+.menu > ul > li:before {
     content: '';
     height: 100%;
     width: 1px;
@@ -192,7 +197,7 @@ header .callback {
     background: -o-linear-gradient(top,  #f47924,  #f26029);
     background: -ms-linear-gradient(top,  #f47924,  #f26029);
 }
-.menu li:after {
+.menu > ul > li:after {
     content: '';
     height: 100%;
     width: 1px;
@@ -209,19 +214,69 @@ header .callback {
     background: -o-linear-gradient(top,  #f7941e,  #f47b23);
     background: -ms-linear-gradient(top,  #f7941e,  #f47b23);
 }
-.menu li a {
+.menu > ul > li:last-child:after,
+.menu > ul > li:last-child:before {
+    display: none;
+}
+.menu > ul > li > a {
     display: inline-block;
     line-height: 44px;
     color: #fff;
     text-decoration: none;
     padding: 0 27px;
 }
-.menu li a img {
+.menu > ul > li:hover > a {
+    background: #bf1e2e;
+}
+.menu > ul > li > a img {
     vertical-align: middle;
     position: relative;
     left: -3px;
 }
+.menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+}
+.menu li:hover .submenu {
+    display: block;
+}
 /* menu (end) */
+
+/* submenu (begin) */
+.submenu {
+    display: none;
+}
+.submenu .inner {
+    overflow: hidden;
+    background: #ffffff;
+    border: 6px solid #bf1e2e;
+    position: relative;
+    top: 2px;
+    padding: 30px 50px;
+    white-space: nowrap;
+}
+.submenu ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+}
+.submenu ul + ul {
+    margin: 0 0 0 50px;
+}
+.submenu ul li {}
+.submenu ul li + li {
+    margin: 10px 0 0;
+}
+.submenu ul li a {
+    color: #333;
+    font: 14px arial;
+}
+.submenu ul li a:hover {
+    color: #bf1e2e;
+}
+/* submenu (end) */
 
 /* banner (begin) */
 .banner {
@@ -288,3 +343,137 @@ footer .wrapper {
     color: #fff;
 }
 /* fMenu (end) */
+
+/* advancedService (begin) */
+.advancedService {
+    margin: 35px 0 0;
+}
+.advancedService ul {
+    width: 1000px;
+}
+.advancedService li {
+    width: 230px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+
+    background: #d6d6d6 url(/i/advbg.png) repeat-x 0 0;
+
+    -webkit-box-shadow: 0 0 10px 1px #dbdbdb;
+    -moz-box-shadow: 0 0 10px 1px #dbdbdb;
+    box-shadow: 0 0 10px 1px #dbdbdb;
+}
+.advancedService li + li {
+    margin: 0 0 0 16px;
+}
+.advancedService li h3 {
+    font: bold 16px arial;
+    margin: 15px 0 0;
+}
+/* advancedService (end) */
+
+/* scheme (begin) */
+.scheme {
+    margin: 45px 0 0;
+}
+.scheme .head {
+    font: bold 36px arial;
+    position: relative;
+    text-align: center;
+    margin: 0 0 65px;
+}
+.scheme .head:after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #e6e6e6;
+}
+.scheme .head span {
+    background: #ffffff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+}
+.scheme ul {}
+.scheme ul li {
+    text-align: center;
+    font: bold 15px arial;
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+}
+.scheme ul li img {
+    display: block;
+    margin: 0 0 15px;
+}
+.scheme ul li + li {
+    margin: 0 0 0 20px;
+}
+/* scheme (end) */
+
+/* advantages (begin) */
+.advantages {
+    margin: 130px 0 0;
+    background: #f2f2f2;
+    padding: 25px;
+    position: relative;
+}
+.advantages:before {
+    content: '';
+    width: 100%;
+    height: 65px;
+    background: url(/i/adv-top.png) no-repeat 0 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+}
+.advantages:after {
+    content: '';
+    width: 100%;
+    height: 27px;
+    background: url(/i/adv-b.png) no-repeat 0 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.advantages .head {
+    font: bold 36px arial;
+    text-align: center;
+    margin: 0 0 35px;
+}
+.advantages .cover {
+    width: 85px;
+    float: left;
+    text-align: center;
+}
+.advantages .info {
+    overflow: hidden;
+}
+.advantages ul {
+    width: 1000px;
+    margin: 0 0 -40px;
+}
+.advantages ul li {
+    color: #4a4a4a;
+    font: 13px/18px arial;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 90px 40px 0;
+}
+.advantages .name {
+    font: bold 18px arial;
+    margin: 0 0 7px;
+    color: #000;
+}
+/* advantages (end) */
+
+/* feedback (begin) */
+.feedback {
+    margin: 105px 0 0;
+}
+/* feedback (end) */
