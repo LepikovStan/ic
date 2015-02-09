@@ -101,6 +101,8 @@ command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr {display: inline
 	font: bold 13px arial;
 	background: url(../i/phone-inround.png) no-repeat center 0;
 	padding: 40px 0 0;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .callback:hover {
 	color: #bf1e2e;
@@ -700,46 +702,77 @@ input[type=submit] {
 .text-articles .articles {
     margin: 40px 0 0;
 }
-/* text-articles (end) */
-
-/* news (begin) */
-.news {}
-.news ul {}
-.news ul li {
+.text-articles .news ul {}
+.text-articles .news ul li {
     overflow: hidden;
     color: #6e6e6e;
     font: 13px arial;
     margin: 30px 0 0;
 }
-.news ul li:first-child {
+.text-articles .news ul li:first-child {
     margin: 0;
 }
-.news ul li .date {
+.text-articles .news ul li .date {
     float: left;
     color: #fff;
     width: 62px;
     margin: 0 20px 0 0;
     text-align: center;
 }
-.news ul li .day {
+.text-articles .news ul li .day {
     font: 36px arial;
     background: #f58122;
     margin: 0 0 1px;
 }
-.news ul li .month {
+.text-articles .news ul li .month {
     font: 13px arial;
     background: #bf1e2e;
 }
-.news ul li .info {
+.text-articles .news ul li .info {
     overflow: hidden;
     width: 305px;
+    line-height: 18px;
 }
-.news ul li .h {
+.text-articles .news ul li .h {
     font: 14px arial;
     margin: 0 0 7px;
 }
+.text-articles .news ul li .h a {
+    color: #000;
+}
+/* text-articles (end) */
+
+/* news (begin) */
+.news {}
+.news ul {}
+.news ul li {
+    color: #4a4a4a;
+    overflow: hidden;
+    margin: 35px 0 0;
+}
+.news ul li .cover {
+    float: left;
+    margin: 0 15px 0 0;
+}
+.news ul li .info {
+    overflow: hidden;
+    line-height: 20px;
+}
+.news ul li .date {
+    color: #f7941e;
+    font: italic 12px arial;
+    margin: 0 0 5px;
+}
+.news ul li .h {
+    font: bold 18px arial;
+    margin: 0 0 15px;
+}
 .news ul li .h a {
     color: #000;
+}
+.news .news-date {
+    color: #f7941e;
+    font: italic 12px arial;
 }
 /* news (end) */
 
@@ -804,36 +837,41 @@ input[type=submit] {
 }
 /* mainPageInfo (end) */
 
-/* about (begin) */
-.about {
+/* uc (begin) */
+.uc {
     font: 13px arial;
     color: #4a4a4a;
     margin: 45px 0 0;
 }
-.about h1 {
+.uc h1 {
     font: bold 28px arial;
     color: #000;
     margin: 0 0 20px;
 }
-.about h2 {
+.uc h2 {
     font: bold 21px arial;
     color: #000;
     margin: 0 0 20px;
 }
-.about p {
+.uc p {
+    margin: 0 0 35px;
+    line-height: 20px;
+}
+.uc ul {
     margin: 0 0 45px;
 }
-.about ul {
-    margin: 0 0 45px;
-}
-.about ul li {
+.uc ul li {
     margin: 0 0 5px;
 }
-.about ul li span {
+.uc ul li span {
     color: #f7941e;
     margin: 0 5px;
 }
-/* about (end) */
+.uc img[align=left] {
+    margin: 0 20px 20px 0;
+    display: inline-block;
+}
+/* uc (end) */
 
 /* breadcrumbs (begin) */
 .breadcrumbs {
@@ -853,4 +891,217 @@ input[type=submit] {
 h1.mh {
     font: bold 28px arial;
 }
+h1.mh .button {
+    vertical-align: middle;
+    margin: 0 0 0 20px;
+}
 /* h1 (end) */
+
+/* pager (begin) */
+.news + .pager,
+.reviews + .pager,
+.products + .pager{
+    margin: 60px 0 0;
+}
+.pager {
+    font: 14px arial;
+    padding: 35px 0 0;
+    border-top: 3px solid #f7941e;
+    text-align: center;
+}
+.pager a, .pager span {
+    display: inline-block;
+    padding: 0 5px;
+}
+.pager .active {
+    background: #f7941e;
+    color: #fff;
+}
+.pager a {
+    color: #000;
+}
+/* pager (end) */
+
+/* reviews (begin) */
+.reviews {}
+.reviews ul {}
+.reviews ul li {
+    margin: 20px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #d9d9d9;
+    color: #4a4a4a;
+}
+.reviews ul li:first-child {
+    border: 0;
+    margin: 0;
+}
+.reviews ul li .date {
+    color: #f7941e;
+    font: italic 12px arial;
+    margin: 0 0 5px;
+}
+.reviews ul li .h {
+    font-size: 18px;
+    color: #000;
+    margin: 0 0 10px;
+}
+/* reviews (end) */
+
+/* services (begin) */
+.services {}
+.services ul {}
+.services ul li {
+    margin: 15px 0 0;
+}
+.services ul li a {
+    color: #000;
+}
+/* services (end) */
+
+/* products (begin) */
+.products {}
+.products ul {}
+.products ul li {
+    margin: 20px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #d9d9d9;
+    overflow: hidden;
+}
+.products ul li:first-child {
+    border: 0;
+    margin: 0;
+}
+.products ul li .h {
+    font: bold 18px arial;
+    margin: 0 0 10px;
+}
+.products ul li .h a {
+    color: #000;
+}
+.products ul li .info {
+    overflow: hidden;
+    font: 13px/20px arial;
+    color: #4a4a4a;
+}
+.products ul li .cover {
+    float: left;
+    width: 250px;
+}
+/* products (end) */
+
+/* popup (begin) */
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+}
+.popup-substrate {
+    background: #000;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 15px 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000;
+    width: 390px;
+    margin: 0 0 0 -195px;
+}
+.popup-content .close {
+    width: 28px;
+    height: 28px;
+    background: url(../i/closebtn.png) no-repeat 0 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: -14px -14px 0 0;
+}
+.popup-content .close:hover {
+    background-position: -28px 0;
+}
+/* popup (end) */
+
+/* fcallback (begin) */
+.fcallback {}
+.fcallback .h {
+    font: 18px arial;
+    border-bottom: 2px solid #f58122;
+    padding: 0 0 5px;
+    margin: 0 0 10px;
+}
+.fcallback label {
+    color: #6e6e6e;
+    font: italic 12px arial;
+}
+.fcallback input[type=text] {
+    color: #6e6e6e;
+    font: bold 14px/27px arial;
+    height: 27px;
+    vertical-align: middle;
+    width: 220px;
+    margin: 0 15px 0 0;
+}
+.fcallback input[type=submit] {
+    width: 150px;
+    font: 11px/29px arial;
+    height: 29px;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    background: url(../i/fcbbut.png) no-repeat 0 0;
+}
+.fcallback input[type=submit]:hover {
+    background-position: 0 -29px;
+}
+/* fcallback (end) */
+
+/* contacts (begin) */
+.contacts {
+    color: #4a4a4a;
+}
+.contacts .mh {
+    color: #000;
+}
+.contacts .cols {
+    margin: 35px 0 0;
+}
+.contacts .cols .l-col {
+    width: 390px;
+}
+.contacts .cols .r-col {
+    width: 500px;
+}
+.contacts p {
+    margin: 0 0 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.contacts p a {
+    color: #000;
+}
+/* contacts (end) */
+
+/* requisites (begin) */
+.requisites {
+    margin: 50px 0 0;
+}
+.requisites h3 {
+    margin: 0 0 15px;
+    font: bold 16px arial;
+}
+/* requisites (end) */
