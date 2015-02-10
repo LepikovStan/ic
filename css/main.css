@@ -283,16 +283,51 @@ header .callback {
 
 /* banner (begin) */
 .banner {
+    position: relative;
+}
+.banner-cont {
     overflow: hidden;
 }
 .banner ul {
-    width: 10000px;
+    position: relative;
+    height: 390px;
+}
+.banner .banner-item:first-child{
+    left: 0;
 }
 .banner .banner-item {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 100%;
 }
 .banner .banner-item img {
     display: block;
+}
+.banner .btn {
+    width: 55px;
+    height: 73px;
+    position: absolute;
+    top: 50%;
+    margin: -36px 0 0;
+    background-image: url(../i/sliderbtn.png);
+    cursor: pointer;
+    z-index: 5;
+}
+.banner .btn.prev {
+    left: 0;
+    margin-left: -30px;
+    background-position: 0 0;
+}
+.banner .btn.prev:hover {
+    background-position: 0 -73px;
+}
+.banner .btn.next {
+    right: 0;
+    margin-right: -30px;
+    background-position: -55px 0;
+}
+.banner .btn.next:hover {
+    background-position: -55px -73px;
 }
 /* banner (end) */
 
@@ -1105,3 +1140,36 @@ h1.mh .button {
     font: bold 16px arial;
 }
 /* requisites (end) */
+
+/* .banner-pager (begin) */
+.banner-pager {
+    overflow: hidden;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+.banner-pager-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background: #f1592a;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.banner-pager-item.active {
+    background: #f7941e;
+}
+.banner-pager-item + .banner-pager-item {
+    margin: 0 0 0 10px;
+}
+/* .banner-pager (end) */
+
+/* maps (begin) */
+.maps {
+    width: 500px;
+    height: 500px;
+}
+/* maps (end) */
